@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # acquire the version
 cd ..
 if [ -z $(git tag) ]
