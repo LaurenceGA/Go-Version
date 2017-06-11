@@ -7,8 +7,8 @@ then
 	version="unknown"
 else
 	tag_name=$(git describe --tags --abbrev=0)
-	build_num=$(git rev-list $tag_name.. --count)
-	version=$tag_name.$build_num
+	build_num=$(git rev-list ${tag_name}.. --count)
+	version=${tag_name}.${build_num}
 fi
 cd version
 
