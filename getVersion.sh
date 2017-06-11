@@ -1,4 +1,5 @@
 # acquire the version
+cd ..
 if [ -z $(git tag) ]
 then
 	echo "no tags found!"
@@ -8,6 +9,7 @@ else
 	build_num=$(git rev-list $tag_name.. --count)
 	version=$tag_name.$build_num
 fi
+cd version
 
 echo "Setting version to $version"
 
